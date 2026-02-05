@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faktencheck Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="badge">Faktencheck · Quiz</div>
+      <div class="progress-label">
+        <span id="progressText">Frage 1/30</span>
+      </div>
+    </header>
+
+    <article class="card" id="card">
+      <div class="status" id="statusBadge" data-state="true">
+        <span class="status-icon material-icons-outlined" aria-hidden="true">check</span>
+        <span class="status-text">Richtig</span>
+      </div>
+      <p class="statement" id="statement"></p>
+      <div class="explanation" id="explanation" data-state="true">
+        <div class="ex-label" id="exLabel">Erläuterung</div>
+        <p id="exText"></p>
+      </div>
+    </article>
+
+    <div class="actions">
+      <button class="nav-btn" id="prevBtn">Zurück</button>
+      <button class="nav-btn primary" id="nextBtn">Weiter</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
