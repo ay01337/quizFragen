@@ -1,11 +1,12 @@
 :root {
-  --bg: #f6f5f2;
+  --bg: #1f2430;
   --card: #ffffff;
   --text: #1f2937;
-  --muted: #6b7280;
+  --muted: #7b8794;
   --true: #0f766e;
   --false: #d9534f;
-  --shadow: 0 10px 45px -18px rgba(0, 0, 0, 0.18);
+  --shadow: 0 10px 45px -18px rgba(0, 0, 0, 0.22);
+  --grad: linear-gradient(135deg, #0ea5e9, #6366f1);
 }
 
 * {
@@ -15,9 +16,7 @@
 body {
   margin: 0;
   font-family: "Manrope", system-ui, -apple-system, sans-serif;
-  background: radial-gradient(circle at 15% 20%, #e7f5ff 0, transparent 25%),
-    radial-gradient(circle at 80% 0%, #fef3c7 0, transparent 22%),
-    var(--bg);
+  background: rgb(27, 27, 31);
   color: var(--text);
   min-height: 100vh;
   display: grid;
@@ -40,7 +39,7 @@ body {
 }
 
 .badge {
-  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  background: var(--grad);
   color: white;
   padding: 10px 14px;
   border-radius: 12px;
@@ -52,8 +51,8 @@ body {
 .progress-label {
   display: flex;
   justify-content: flex-end;
-  color: var(--muted);
-  font-size: 14px;
+  color: #cbd5e1;
+  font-size: 18px;
   font-weight: 600;
   min-width: 120px;
   text-align: right;
@@ -150,7 +149,7 @@ body {
 }
 
 .nav-btn.primary {
-  background: linear-gradient(135deg, #0ea5e9, #10b981);
+  background: var(--grad);
   color: white;
   border: none;
   box-shadow: var(--shadow);
