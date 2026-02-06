@@ -1,11 +1,11 @@
 :root {
-  --bg: #1f2430;
-  --card: #ffffff;
+  --bg: #f6f5f2;
+  --card: rgb(242, 242, 242);
   --text: #1f2937;
-  --muted: #7b8794;
+  --muted: #6b7280;
   --true: #0f766e;
   --false: #d9534f;
-  --shadow: 0 10px 45px -18px rgba(0, 0, 0, 0.22);
+  --shadow: 0 10px 45px -18px rgba(0, 0, 0, 0.25);
   --grad: linear-gradient(135deg, #0ea5e9, #6366f1);
 }
 
@@ -16,7 +16,9 @@
 body {
   margin: 0;
   font-family: "Manrope", system-ui, -apple-system, sans-serif;
-  background: rgb(27, 27, 31);
+  background: radial-gradient(circle at 15% 20%, #e7f5ff 0, transparent 25%),
+    radial-gradient(circle at 80% 0%, #fef3c7 0, transparent 22%),
+    var(--bg);
   color: var(--text);
   min-height: 100vh;
   display: grid;
@@ -51,8 +53,8 @@ body {
 .progress-label {
   display: flex;
   justify-content: flex-end;
-  color: #cbd5e1;
-  font-size: 18px;
+  color: var(--muted);
+  font-size: 20px;
   font-weight: 600;
   min-width: 120px;
   text-align: right;
@@ -68,6 +70,7 @@ body {
   border-radius: 20px;
   padding: 28px;
   box-shadow: var(--shadow);
+  border: 1px rgb(255, 255, 255) solid;
   display: grid;
   gap: 18px;
   position: relative;
@@ -86,11 +89,13 @@ body {
 
 .status[data-state="true"] {
   background: rgba(15, 118, 110, 0.12);
+  border: 1px green solid;
   color: var(--true);
 }
 
 .status[data-state="false"] {
   background: rgba(217, 83, 79, 0.12);
+  border: 1px red solid;
   color: var(--false);
 }
 
